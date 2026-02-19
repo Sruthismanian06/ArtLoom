@@ -1,68 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking order</title>
+    <title>Booking Order</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
-<body>
-    <div class="max-w-[100%] py-10 space-y-5">
-        <div class="w-[90%] md:w-[75%] mx-auto grid grid-cols-1">
-             <h2 class="font-[700] text-[28px] leading-[34px] text-[#183b56] flex flex-col items-center">Book your Order</h2>
-        </div>
+<body class="bg-[#F8F3ED] text-[#1F2A44]">
 
-        <form class="w-[90%] md:w-[75%] mx-auto space-y-5">
-            <div class="flex items-center justify-center gap-6">
-                <label class="font-semibold text-[#183b56]">User Name:</label>
-                <input type="text" placeholder="Enter your Name" class="border border-gray-300 px-3 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#183b56]">
+    <div class="2xl:container mx-auto py-10 space-y-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#183B56] text-center mb-6">Book Your Order</h2>
+
+           <form class="w-full max-w-2xl mx-auto space-y-6 bg-[#EFE7DE] p-6 md:p-8 rounded-xl shadow-xl">
+
+            <div class="flex flex-col md:flex-row items-start md:items-center gap-4">
+                <label for="username" class="font-semibold text-[#183B56] w-full md:w-1/3">User Name:</label>
+                <input type="text" id="username" placeholder="Enter your Name" required class="border border-gray-300 px-4 py-3 rounded-lg w-full md:w-2/3 focus:ring-2 focus:ring-[#183B56] outline-none">
             </div>
-            <div class="flex items-center justify-center gap-6">
-                <label class="font-semibold text-[#183b56]">Email Id:</label>
-                <input type="email" placeholder="Enter current Email Id" class="border border-gray-300 px-3 py-4 rounded-lg outline-none focus:ring-2 focus:ring-[#183b56]">
+
+            <div class="flex flex-col md:flex-row items-start md:items-center gap-4">
+                <label for="email" class="font-semibold text-[#183B56] w-full md:w-1/3">Email Id:</label>
+                <input type="email" id="email" placeholder="Enter current Email Id" required class="border border-gray-300 px-4 py-3 rounded-lg w-full md:w-2/3 focus:ring-2 focus:ring-[#183B56] outline-none">
             </div>
-            <div class="flex items-center justify-center gap-6">
-                <label class="font-semibold text-[#183b56]">Phone Number:</label>
-                <input type="number" placeholder="Phone Number"class="border border-gray-300 px-4 py-2 rounded-lg outline-none focus:ring-2 focus:ring-[#183b56]">
+
+            <div class="flex flex-col md:flex-row items-start md:items-center gap-4">
+                <label for="phone" class="font-semibold text-[#183B56] w-full md:w-1/3">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Phone Number" class="border border-gray-300 px-4 py-3 rounded-lg w-full md:w-2/3 focus:ring-2 focus:ring-[#183B56] outline-none">
             </div>
-            <div class="flex items-center justify-center gap-6">
-                <label class="font-semibold text-[#183b56]">Type of Artwork you need:</label>
-                <select class="border border-gray-300 px-4 py-2 rounded-lg outline-none focus:ring-2 focus:ring-[#183b56]">
+
+            <div class="flex flex-col md:flex-row items-start md:items-center gap-4">
+                <label for="artwork" class="font-semibold text-[#183B56] w-full md:w-1/3">Type of Artwork:</label>
+                <select id="artwork" class="border border-gray-300 px-4 py-3 rounded-lg w-full md:w-2/3 focus:ring-2 focus:ring-[#183B56] outline-none">
                     <option>Pencil Sketching</option>
                     <option>Custom Gift Artworks</option>
-                    <option>Semi Illustration Potraits</option>
-                    <option>Wall Paintings</option> 
-            </select>
+                    <option>Semi Illustration Portraits</option>
+                    <option>Wall Paintings</option>
+                </select>
             </div>
-            <div class="flex items-center justify-center gap-6">
-                <label class="font-semibold text-[#183b56]">Book Order Date:</label>
-                <input type="date" placeholder="date"class="border border-gray-300 px-4 py-2 rounded-lg outline-none focus:ring-2 focus:ring-[#183b56]">
+
+            <div class="flex flex-col md:flex-row items-start md:items-center gap-4">
+                <label for="date" class="font-semibold text-[#183B56] w-full md:w-1/3">Booking Date:</label>
+                <input type="date" id="date" class="border border-gray-300 px-4 py-3 rounded-lg w-full md:w-2/3 focus:ring-2 focus:ring-[#183B56] outline-none">
             </div>
-            <div class="flex items-center justify-center gap-6">
-                <label class="font-semibold text-[#183b56] ">Confirm Order:</label>
-                    <label class="flex items-center">
-                        <input type="radio" name="choose" class="accent-[#183b56]" /> Yes
+
+            <div class="flex flex-col md:flex-row items-start md:items-center gap-4">
+                <label class="font-semibold text-[#183B56] w-full md:w-1/3">Confirm Order:</label>
+                <div class="flex gap-6">
+                    <label class="flex items-center gap-2">
+                        <input type="radio" name="confirm" aria-label="Confirm order yes" value="yes" class="accent-[#B76E5D]"> Yes
                     </label>
-                    <label class="flex items-center ">
-                        <input type="radio" name="choose" class="accent-[#183b56]" /> No
+                    <label class="flex items-center gap-2">
+                        <input type="radio" name="confirm" aria-label="Confirm order no" value="no"class="accent-[#B76E5D]"> No
                     </label>
                 </div>
             </div>
-            <div class="flex justify-center gap-4">
-                <button class="font-semibold text-[#183b56] border-2 border-gray-300 px-4 py-3 rounded-lg hover:bg-[#b8b4b4]">Reset</button>
-                <button class="font-semibold text-[#183b56] border-2 border-gray-300 px-4 py-3 rounded-lg hover:bg-[#b8b4b4]">Submit</button>
+
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <button type="reset" class="w-full md:w-auto font-semibold text-[#183B56] border-2 border-gray-300 px-6 py-3 rounded-lg hover:bg-[#d6c9ba] transition-colors duration-300">Reset</button>
+                <button type="submit" class="w-full md:w-auto font-semibold text-white bg-[#183B56] px-6 py-3 rounded-lg hover:bg-[#0f2a44]">Submit</button>
             </div>
         </form>
-     
-    <div class="flex flex-col items-center mt-5">
-        <button class="bg-[#183B56] text-white px-5 py-4 text-[15px] rounded-lg ">
-        <a href="./index.html">GO to Home</a>
-    </button>
 
+        <!-- Back to Home -->
+        <div class="flex justify-center mt-8">
+            <a href="./index.html" class="bg-[#183B56] text-white px-6 py-3 rounded-lg hover:bg-[#0f2a44]">GO to Home</a>
+        </div>
     </div>
-    
-    
+
 </body>
 </html>
 
