@@ -1,39 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ArtLoom– artstore...">
     <title>ArtLoom</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
+   
 </head>
-<body>         
+<body class="bg-[#F8F3ED] text-[#1F2A44]">
+    
     <!--header-->
     <section>
-        <div class="max-w-[100%] py-10 bg-[url(https://ik.imagekit.io/sruthismanian/Mern/Puzzle.jpg)] bg-cover h-[100vh]">
-            <!--nav bar-->
-               <nav class=" absolute top-10 right-40 flex text-white gap-7">
-                    <a href="#artworks" class="hover:underline">Artworks</a> |
-                    <a href="#order" class="hover:underline">Orders</a> |
-                    <a href="#contact" class="hover:underline">Contact</a>
-                </nav>
-            <div class="w-[90%] md:w-[75%] mx-auto grid grid-cols-1 h-screen">
-                        <div class="text-[700] text-white leading-[80px] flex flex-col justify-center items-center">
-                                <h1 class="text-[80px] animate-bounce">ArtLoom</h1>
-                                <p class="text-[30px] transition"><i>Handmade Artworks</i></p>
-                        </div>
+        <div class="2xl:container mx-auto py-10 bg-[url(https://ik.imagekit.io/sruthismanian/a%20woman%20sitting%20at%20a%20table%20....jpg)] bg-cover min-h-screen">
+            <div class="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2">
+                <!-- responsive nav-->
+                <div class=" p-5 text-[white] flex justify-between">
+                   <h1>Art Store</h1>
+                <div class="flex justify-end gap-5">
+                    <!--burger menu-->
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-menu-icon lucide-menu  md:hidden" id="menuIcon">
+                        <path d="M4 5h16"/><path d="M4 12h16"/>
+                        <path d="M4 19h16"/>
+                        </svg>
+                    <!--cross menu-->
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" 
+                       stroke-linejoin="round" class="lucide lucide-x-icon lucide-x hidden md:hidden " id="crossIcon">
+                       <path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </div>
+                </div>  
+            <!--menu bar--> 
+               <div class="hidden bg-white/20 md:block md:bg-transparent transition-all duration-300" id="navItems">
+                 <ul class="flex flex-col text-white items-center md:flex-row justify-end gap-10 p-10">
+                    <li><a href="#artworks" class="hover:text-[#4D96FF]">Artworks</a></li> 
+                    <li><a href="#contact" class="hover:text-[#4D96FF]">Contact</a></li> 
+                    <li><a href="#order" class="hover:text-[#4D96FF]">Orders</a></li>
+                 </ul>
+               </div>
+            </div>   
+            <!--main heading-->   
+            <div class="2xl:container mx-auto grid grid-cols-1">
+                <div class="w-[90%] mx-auto flex flex-col justify-center items-center h-screen">
+                <div class="font-[600] text-white leading-[80px]">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl animate-bounce">ArtLoom</h1>
+                    <p class="text-2xl md:text-2xl lg:text-4xl transition"><i>Handmade Artworks</i></p>
+                </div>
                 </div>
             </div>
         </div>
     </section>
     <!--main-->
     <section>
-        <div class="max-w-[100%] py-10 ">
-            <div class="w-[90%] md:w-[75%] mx-auto ">
-                <h2 class="font-[700] text-[28px] leading-[34px] text-[#183b56] flex flex-col items-center">Welcome to ArtLoom</h2>
+        <div class="2xl:container mx-auto py-10 ">
+            <div class="w-[90%] mx-auto ">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1F2A44] flex flex-col items-center">Welcome to ArtLoom</h2>
             </div>
-            <div class="w-[90%] md:w-[75%] mx-auto grid grid-cols-1">
-                <div class="flex flex-col items-center justify-center">
+            <div class="w-[90%]  mx-auto grid grid-cols-1">
+                <div class="flex flex-col items-center justify-center text-gray-600 text-sm md:text-base">
                     <p>Hey all !! I'm <strong><i>Sruthi</i></strong>, a handmade artist who creates potraits, sketches, wall painting and custom art with love,
                        paitence and genuine creativity. Every artwork you see here is drawn by hand - with attention to detail, emotion and personal touch.Drawing has always been my passion, and over the years I have created many custom artworks for clients, friends, and special occasions.
                        I believe each potrait tell a story - and I love capturing those beautiful momnents on paper.
@@ -46,84 +71,91 @@
     </section>
     <!--featured arts-->
    <section>
-    <div class="max-w-[100%] py-10">
-        <div class="w-[90%] md:w-[75%] mx-auto ">
+    <div class="2xl:container mx-auto bg-[#EFE7DE] py-10">
+        <div class="w-[90%] mx-auto">
             <div class=" flex flex-col items-center ">
-                <h2 class="font-[700] text-[28px] leading-[34px] text-[#183b56] gap-5">Featured Arts</h2>
+                <h2 class=" text-2xl md:text-3xl font-semibold text-[#1F2A44] p-5">Featured Arts</h2>
             </div>
-        <div class="w-[90%] md:w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <!--card img-->
-             <div class="flex flex-col gap-4 border rounded shadow-xl  justify-center items-center">
-                <img src="https://ik.imagekit.io/sruthismanian/Mern/_pencil%20_pencilsketch.jpeg" alt="pencil_sketch" class="rounded-lg w-[75%] h-[70%]">
-                <h2 class="font-[500] text-[18px] text-[#183B56] leading-[20px]">Pencil Sketches</h2>
+             <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-4 ">
+                <img src="https://ik.imagekit.io/sruthismanian/Mern/_pencil%20_pencilsketch.jpeg" alt="pencil_sketch" class="w-full aspect-square object-cover rounded-lg mb-4 ">
+                <h2 class="text-[#183B56] text-lg md:text-xl p-1 text-center">Pencil Sketches</h2>
             </div>
-            <div class="flex flex-col gap-4 rounded border shadow-xl justify-center items-center">
-                <img src="https://ik.imagekit.io/sruthismanian/Mern/This%20playful%20doodle%20features%20a%20group%20of%20quirky%20and_.jpeg" alt="cartoon_sketches" class="rounded-lg w-[75%] h-[70%]">
-                <h2 class="font-[500] text-[18px] text-[#183B56] leading-[20px]">Cartoon sketches</h2>
+            <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-4">
+                <img src="https://ik.imagekit.io/sruthismanian/Mern/This%20playful%20doodle%20features%20a%20group%20of%20quirky%20and_.jpeg" alt="cartoon_sketches" class="w-full aspect-square object-cover rounded-lg mb-4">
+                <h2 class="text-[#183B56] text-lg md:text-xl p-1 text-center">Cartoon sketches</h2>
             </div>
-            <div class="flex flex-col gap-4 rounded border shadow-xl justify-center items-center">
-                <img src="https://ik.imagekit.io/sruthismanian/Mern/Discover%20creative%20wall%20color%20and%20wallpaper%20ideas_.jpeg" alt="wall_painting" class="rounded-lg w-[75%] h-[70%]">
-                <h2 class="font-[500] text-[18px] text-[#183B56] leading-[20px]">Wall Paintings</h2>
+            <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-4">
+                <img src="https://ik.imagekit.io/sruthismanian/Mern/Discover%20creative%20wall%20color%20and%20wallpaper%20ideas_.jpeg" alt="wall_painting" class="w-full aspect-square object-cover rounded-lg mb-4">
+                <h2 class="text-[#183B56] text-lg md:text-xl p-1 text-center">Wall Paintings</h2>
             </div>
-            <div class="flex flex-col gap-4 rounded border shadow-xl justify-center items-center">
-                <img src="https://ik.imagekit.io/sruthismanian/Mern/Customised%20couple%20mini%20canvas%20painting%20___%20Dm%20me_.jpeg" alt="custom_gifts" class="rounded-lg w-[75%] h-[70%]">
-                <h2 class="font-[500] text-[18px] text-[#183B56] leading-[20px]">Custom Gift Artworks</h2>
+            <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-4">
+                <img src="https://ik.imagekit.io/sruthismanian/Mern/Customised%20couple%20mini%20canvas%20painting%20___%20Dm%20me_.jpeg" alt="custom_gifts" class="w-full aspect-square object-cover rounded-lg mb-4">
+                <h2 class="text-[#183B56] text-lg md:text-xl p-1 text-center">Custom Gift Artworks</h2>
             </div>
-            <div class="flex flex-col gap-4 rounded border shadow-xl justify-center items-center">
-                <img src="https://ik.imagekit.io/sruthismanian/Mern/Welcome%20to%20our%20special%20gig%20for%20couples%20or%20wedding_.jpeg" alt="family_potraits" class="rounded-lg w-[75%] h-[70%]">
-                <h2 class="font-[500] text-[18px] text-[#183B56] leading-[20px]">Family Potraits</h2>
+            <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-4">
+                <img src="https://ik.imagekit.io/sruthismanian/Mern/Welcome%20to%20our%20special%20gig%20for%20couples%20or%20wedding_.jpeg" alt="family_potraits" class="w-full aspect-square object-cover rounded-lg mb-4">
+                <h2 class="text-[#183B56] text-lg md:text-xl p-1 text-center">Family Potraits</h2>
             </div>
-            <div class="flex flex-col gap-4 rounded border shadow-xl justify-center items-center">
-                <img src="https://ik.imagekit.io/sruthismanian/Mern/Cute%20birthday%20card%20idea%20_.jpeg" alt="special_occasions" class="rounded-lg w-[75%] h-[70%]">
-                <h2 class="font-[500] text-[18px] text-[#183B56] leading-[20px]">Special occasions Artworks</h2>
+            <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-4">
+                <img src="https://ik.imagekit.io/sruthismanian/Mern/Cute%20birthday%20card%20idea%20_.jpeg" alt="special_occasions" class="w-full aspect-square object-cover rounded-lg mb-4">
+                <h2 class="text-[#183B56] text-lg md:text-xl text-center p-1">Special occasions Artworks</h2>
             </div>
         </div>
         </div>
    </section>
    <!--gallery-->
     <section>
-        <div class="max-w-[100%] ">
-            <div class="w-[90%] md:w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 ">
+        <div class="2xl:container mx-auto py-5">
+            <div class="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 ">
                 <div class="gap-5 flex flex-col items-start justify-center order-2 md:order-1">
-                    <h2 class="font-[700] text-[28px] leading-[34px] text-[#183b56]" id ="artworks">Explore Us</h2>
-                    <p class="text-[#090909] text-[16px] leading-[24px] font-[400]">Here are a few of my recently completed handmade artworks.Each potrait is drawn with care, detailing, and a personal artistic touch.
+                    <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2A44]" id ="artworks">Explore Us</h2>
+                    <p class="text-gray-600 text-sm md:text-base">Here are a few of my recently completed handmade artworks.Each potrait is drawn with care, detailing, and a personal artistic touch.
                         Click below to view the full artworks.</p>
-                    <button class="bg-[#183B56] text-white px-5 py-4 text-[15px] rounded-lg">
-                        <a href="view-gallery.html">View Artworks</a>
-                    </button>    
+                    <a href="view-gallery.html" class="bg-[#B76E5D] hover:bg-[#9C5A4C] transition duration-300 text-white px-5 py-4 text-[15px] rounded-lg">
+                        View Artworks
+                    </a>
+                
                 </div>
-                <div class="flex justify-center items-center order-1 md:order-2">
-                    <img src="https://ik.imagekit.io/sruthismanian/Mern/art.jpg" alt="art_img"class="w-[65%] h-[60%]">
+                <div class="flex justify-center items-center order-1 md:order-2 ">
+                    <img src="https://ik.imagekit.io/sruthismanian/Mern/art.jpg" alt="art_img"
+                     class="w-full md:w-3/4 lg:w-2/3 h-auto object-cover rounded-lg hover:scale-105 transition duration-300 shadow-md">
                 </div>
         </div>
     </section>
     <!--book order-->
     <section>
-        <div class="max-w-[100%] bg-[#F6F6F6]">
-            <div class="w-[90%] md:w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 ">
-                <div class="flex justify-center items-center" id="order">
-                    <img src="https://ik.imagekit.io/sruthismanian/Mern/order_.jpeg" alt="order_card"class="w-[70%] h-[80%]">
+        <div class="2xl:container mx-auto bg-[#F6F6F6] py-5">
+            <div class="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 ">
+                <div class="gap-5 flex justify-center items-center" id="order">
+                    <img src="https://ik.imagekit.io/sruthismanian/Mern/order_.jpeg" alt="order_card"class="w-full md:w-3/4 h-auto object-cover rounded-lg shadow-md">
                 </div>
                 <div class="gap-5 flex flex-col items-start justify-center">
-                    <h2 class="font-[700] text-[28px] leading-[34px] text-[#183b56] ">Place Your Order</h2>
-                    <p class="text-[#090909] text-[16px] leading-[24px] font-[400]">Ready to place your order? We need a few quick details.
+                    <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2A44]">Place Your Order</h2>
+                    <p class="text-gray-600 text-sm md:text-base">Ready to place your order? We need a few quick details.
                         Hit the button below to grab your order!</p>
-                    <button class="bg-[#183B56] text-white px-5 py-4 text-[15px] rounded-lg">
-                        <a href="book-order.html" target="_blank">Book Order</a>
-                    </button>    
+                    <a href="book-order.html" class="bg-[#B76E5D] hover:bg-[#9C5A4C] transition duration-300 text-white px-5 py-4 text-[15px] rounded-lg">
+                         Book Order
+                    </a>
+                
                 </div>
         </div>
     </section>
     <!--footer-->
-    <footeer>
-        <div class="bg-[#A0A0A0] text-[white] flex flex-col justify-center items-center gap-3 p-5">
-            <h2 class="font-[700] text-[28px] leading-[34px] text-[#183b56]" id="contact"> Contact Us</h2>
-            <div class="text-[#090909] text-[16px] leading-[24px] font-[400]">
+    <footer>
+        <div class="bg-[#1F2A44] flex flex-col justify-center items-center gap-3 p-5">
+            <h2 class="text-2xl md:text-3xl font-semibold text-[white]" id="contact"> Contact Us</h2>
+            <div class="text-1xl md:text-2xl text-gray-300 font-semibold mb-2 gap-3 flex flex-col justify-center items-center">
                 <p>hello@sruthistudio.com</p>
-                <p>Instagram: @_a._esthete</p>
-                <p>Commision Time: 3-7 days</p>
+                <a href="https://instagram.com/_a._esthete" target="_blank" class="hover:text-white transition">
+                 Instagram: @_a._esthete
+                </a>
+                <p class="text-sm text-gray-300">© 2026 ArtLoom. All rights reserved.</p>
             </div>
         </div>
-    </footeer>
+    </footer>
+     <script src="script.js"></script>
+    <!--javascript file linked-->
 </body>
 </html>
